@@ -1,4 +1,8 @@
-const fs = require('fs');
+const http = require("http");
 
-fs.writeFileSync('hello.txt', 'Hello from Nodejs!')
+const routes = require('./servernew');
+//const fs = require("fs");
 
+const server = http.createServer(routes);
+
+server.listen(3000);
